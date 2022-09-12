@@ -1,0 +1,79 @@
+body{
+    background-color:black;
+    color: #D4D6D7;
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:medium;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.content{
+    background-color:#232325;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;    
+}
+
+.cover-image{
+    border-radius: 10px;
+    height: 570px;
+}
+
+.cover-title{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cover-title ol a {
+    text-decoration: none;
+    color: #0E6CD2;
+}
+
+.main-steps{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-steps p{
+    padding-left: 20px;
+    color: #B8B9B9;
+}
+.main-steps h2{
+    padding-left: 20px;
+}
+/* .main-steps code{
+    padding-left: 20px;
+} */
+
+
+
+.main-steps img{
+    height: 300px;
+    /* padding-left: 20px; */
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .content{
+        margin: 6px;
+    }
+    .cover-image{
+        height: auto;
+    }
+    .main-steps img{
+        height: 200px;
+        max-width: 350px;
+        width: 100%;
+    }
+
+}

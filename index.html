@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link href="./styles.css" rel="stylesheet">
+    <title>Robotics Club - Bluetooth Car</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Welcome to Robotics Club</h1>
+    </div>
+    <div class="content">
+        <img src="https://i.ytimg.com/vi/q76sBeXhSw4/maxresdefault.jpg" class="cover-image" />
+        <div class="cover-title">
+            <h1>Bluetooth Car using Arduino</h1>
+            <h3>What we'll be discussing</h3>
+            <ol>
+                <a href="#i/o">
+                    <li>Inputs & Outputs in Arduino</li>
+                </a>
+                <a href="#led">
+                    <li>Using LED with Arduino</li>
+                </a>
+                <a href="#serial">
+                    <li>What is Serial Communication ?</li>
+                </a>
+                <a href="#motor-driver">
+                    <li>Integrating Motor Driver</li>
+                </a>
+                <a href="#bluetooth-module">
+                    <li>Integrating Bluetooth Module</li>
+                </a>
+                <a href="#combile-everything">
+                    <li>Combine everything to build the car</li>
+                </a>
+            </ol>
+        </div>
+        <div class="main-steps">
+            <div id="i/o">
+                <h2>1. Inputs & Outputs in Arduino</h2>
+                <p>
+                    Arduino basically has two types of pins called digital & analog pins in which digital pins has 1's and 0's data ie HIGH or LOW
+                </p>
+                <img src="https://i.pinimg.com/originals/bc/fb/c4/bcfbc4824903aa623b0b411a7f02daed.jpg"/>
+            </div>
+            <div id="led">
+                <h2>2. Using LED with Arduino</h2>
+                <p>Now coming to using a digital pin as output a led is connected to arduino's digital pins through a 330 ohm resistor and other leg of LED to GND of arduino</p>
+                <img src="https://toptechboy.com/wp-content/uploads/2014/06/LED-Arduino-circuit.jpg"/>
+                <h2>Code for Arduino : </h2>
+                <pre>
+        void setup(){
+            pinMode(13,OUTPUT);
+        }
+        void loop(){
+            digitalWrite(13,HIGH);
+        }
+                </pre>
+            </div>
+            <div id="serial">
+                <h2>3. What is Serial Communication</h2>
+                <p>Used for communication between the Arduino board and a computer or other devices. All Arduino boards have at least one serial port (also known as a UART or USART), and some have several.
+
+                </p>
+                <img src="https://iot-guider.com/wp-content/uploads/2017/08/Serial-communication-between-Arduino.png" alt="">
+            </div>
+            <div id="motor-driver">
+                <h2>4. Integrating Motor Driver</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iure! Ab quibusdam, esse, dignissimos repellendus nemo neque dolorem natus, est exercitationem quod qui! Corporis enim nisi facere animi, asperiores beatae?</p>
+            </div>
+            <div id="bluetooth-module">
+                <h2>5. Integrating Bluetooth Module</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iure! Ab quibusdam, esse, dignissimos repellendus nemo neque dolorem natus, est exercitationem quod qui! Corporis enim nisi facere animi, asperiores beatae?</p>
+            </div>
+            <div id="combile-everything">
+                <h2>6. Combine everything to build the car</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, iure! Ab quibusdam, esse, dignissimos repellendus nemo neque dolorem natus, est exercitationem quod qui! Corporis enim nisi facere animi, asperiores beatae?</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
