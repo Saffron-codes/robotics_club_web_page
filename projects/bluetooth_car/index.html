@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link href="styles.css" rel="stylesheet">
+    <title>Robotics Club - Bluetooth Car</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="title">
+        <h1>Welcome to Robotics Club</h1>
+    </div>
+    <div class="content">
+        <img src="https://i.ytimg.com/vi/q76sBeXhSw4/maxresdefault.jpg" class="cover-image" />
+        <div class="cover-title">
+            <h1>Bluetooth Car using Arduino</h1>
+            <h3>What we'll be discussing</h3>
+            <ol>
+                <a href="#i/o">
+                    <li>Inputs & Outputs in Arduino</li>
+                </a>
+                <a href="#led">
+                    <li>Using LED with Arduino</li>
+                </a>
+                <!-- <a href="#serial">
+                    <li>What is Serial Communication ?</li>
+                </a> -->
+                <a href="#motor-driver">
+                    <li>Integrating Motor Driver</li>
+                </a>
+                <a href="#bluetooth-module">
+                    <li>Integrating Bluetooth Module</li>
+                </a>
+                <a href="#combile-everything">
+                    <li>Combine everything to build the car</li>
+                </a>
+            </ol>
+        </div>
+        <div class="main-steps">
+            <div id="i/o">
+                <h2>1. Inputs & Outputs in Arduino</h2>
+                <p>Arduino basically has two types of pins namely Digital & Analog pins</p>
+                <ul>
+                    <li>
+                        Digital pins use 1's and 0's data (i.e) HIGH or LOW.
+                    </li>
+                    <li>
+                        Analog pins use integers 0 to 1023 as data.
+                    </li>
+                </ul>
+                <p>Today we will learning about digital pins...</p>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTY0jFbH6zmWUISchOkYZygdItHhTYPM9CnMX1CgFYSKOyiwzT2VCdQIE&s=10" />
+            </div>
+            <div id="led">
+                <h2>2. Using LED with Arduino</h2>
+                <p>Now let's see how to control the inbuilt LED on the Arduino </p>
+                <ul>
+                    <li>
+                        First, Connect the Arduino with your computer using the programming cable
+                    </li>
+                    <li>
+                        Next, Open the Arduino IDE application
+                    </li>
+                    <li>
+                        Open the Blink example program and click run
+                    </li>
+                    <li>
+                        You will observe that the LED in the Arduino board starts to blink with a certain interval
+                    </li>
+                    <li>
+                        You can also change the interval at which the LED blinks , by changing it in the code
+                    </li>
+                </ul>
+                <img src="https://toptechboy.com/wp-content/uploads/2014/06/LED-Arduino-circuit.jpg" />
+                <p>Next Let's see how to integrate the motor driver with Arduino...</p>
+            </div>
+            <!-- <div id="serial">
+                <h2>3. What is Serial Communication</h2>
+                <p>Used for communication between the Arduino board and a computer or other devices. All Arduino boards have at least one serial port (also known as a UART or USART), and some have several.
+                </p>
+                <img src="https://iot-guider.com/wp-content/uploads/2017/08/Serial-communication-between-Arduino.png" alt="">
+            </div> -->
+            <div id="motor-driver">
+                <h2>3. Integrating Motor Driver</h2>
+                <p>Integration of Motor Driver with the Arduino</p>
+                <ul>
+                    <li>
+                        The motor driver we use is L298N motor driver
+                    </li>
+                    <li>
+                        It has a total of 6 pins (excluding the power supply pins).
+                    </li>
+                    <li>
+                        The pins at the end, control the speed of the motor and the pins at the center turn on and off
+                        the motor.
+                    </li>
+                    <li>
+                        Today we will only see about the center 4 pins.
+                    </li>
+                    <li>
+                        The L298N Motor driver can control only 2 motors.
+                    </li>
+                    <li>
+                        In the total 4 pins each 2 pins control a single motor
+                        <ul>
+                            <li>
+                                When the input to first pin is high and the input to other pin is
+                                low the motor spins in particular direction.
+                            </li>
+                            <li>
+                                When the input to pins are interchanged
+                                motor spins in the opposite direction.
+                            </li>
+                            <li>
+                                The same rules go for the other 2 pins.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWrB0S2dGUG12Tsg4hkyDhoKxKCE5eyo-nJRlNmrMvJaOJvAXpHx6Wtns&s=10"
+                    alt="">
+                <img src="https://content.instructables.com/ORIG/FJH/RM7F/K1B4D5CQ/FJHRM7FK1B4D5CQ.jpg?auto=webp&fit=bounds&frame=1&height=1024&width=1024auto=webp&frame=1&height=150"
+                    alt="">
+                <p>Next Let's see how to integrate the bluetooth module with Arduino...</p>
+            </div>
+            <div id="bluetooth-module">
+                <h2>4. Integrating Bluetooth Module</h2>
+                <p>We will be using a Bluetooth module for data transmission between your mobile device and your Arduino
+                    board</p>
+                <ul>
+                    <li>
+                        The Bluetooth module we are using is HC-05.
+                    </li>
+                    <li>
+                        The Bluetooth module contains 6 pins.
+                    </li>
+                    <li>
+                        The pins at the end are <code>ENABLE</code> and <code>STATE</code> pins which control the
+                        inbuilt LED in the Bluetooth module.
+                    </li>
+                    <li>
+                        The pins at the center are <code>VCC</code>, <code>GND</code> ,<code>TX</code> and
+                        <code>RX</code>.
+                    </li>
+                    <li>
+                        The <code>VCC</code> and <code>GND</code> pins are the power pins of the module.
+                    </li>
+                    <li>
+                        The <code>TX</code> and <code>RX</code> pins are used for data transmission.
+                    </li>
+
+                </ul>
+
+                <img src="https://www.aranacorp.com/wp-content/uploads/arduino-bluetooth-hc05-communication.png" alt="">
+                <img src="https://www.techtonics.in/image/cache/catalog/wp-content/Openkart%20New%20Product/hc-05-bluetooth-module-hc05-with-ttl-output-for-arduino-tech1537-3294-2-550x550h.jpg"
+                    alt="">
+                <p>Now Let's see how to combine everything into a car</p>
+            </div>
+            <div id="combile-everything">
+                <h2>5. Combine everything to build the car</h2>
+                <p>Connect everything according to the circuit diagram</p>
+                <img src="./circuit-diagram.jpg"/>
+                <p>Follow the code below and upload it to the arduino board</p>
+                <iframe width="100%" height="350" frameBorder="0" src="data:text/html;charset=utf-8,
+                        <head><base target='_blank' /></head>
+                        <body><script src='https://gist.github.com/Saffron-codes/f742a8b6f9334c77f6460304f94cef5c.js'>
+                        </script></body>"></iframe>
+                <p>After building the car download the below application</p>
+                <form action="https://drive.google.com/file/d/1nr4UzZ4P1lAPuTy2ncDNpLsIzeMwYRso/view?usp=drivesdk" method="get" target="_blank">
+                    <button type="submit"  class="download-btn">Download App</button>
+                 </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="https://gist.github.com/Saffron-codes/f742a8b6f9334c77f6460304f94cef5c.js"></script> -->
+    <script>
+        document.getElementById("btn-1")
+            .onclick = function () {
+                let code = document.getElementById("code-1").innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    alert("copied code");
+                }).catch(err => {
+                    alert("Error");
+                })
+            }
+        document.getElementById("btn-2")
+            .onclick = function () {
+                let code = document.getElementById("code-2").innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    alert("copied code");
+                }).catch(err => {
+                    alert("Error");
+                })
+            }
+        document.getElementById("btn-3")
+            .onclick = function () {
+                let code = document.getElementById("code-3").innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    alert("copied code");
+                }).catch(err => {
+                    alert("Error");
+                })
+            }
+
+    </script>
+</body>
+
+</html>
