@@ -37,7 +37,7 @@ body {
 
 #navbar {
     --navbar-height: 100px;
-    position: sticky;
+    position: fixed;
     height: var(--navbar-height);
     background-color: #070707;
     /* background-color: var(--navbar-bg-color); */
@@ -59,15 +59,23 @@ body {
     width: 100%;
 }
 
-.home-link,
+.home-link{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    font-weight:700;
+    align-items: center;
+    font-size: large;
+}
+
+
 .navbar-link {
     color: var(--navbar-text-color);
     text-decoration: none;
     display: flex;
-    font-weight: 400;
+    font-weight:700;
     align-items: center;
-    font-size: x-large;
-    font-weight: 700;
+    font-size: large;
 }
 
 .home-link:is(:focus, :hover) {
@@ -79,6 +87,8 @@ body {
     width: 100%;
     padding: 0.4em 0.8em;
     border-radius: 5px;
+    font-family: 'Poppins';
+    font-weight: 900;
 }
 
 .navbar-link:is(:focus, :hover) {
@@ -145,7 +155,7 @@ body {
 }
 
 #navbar-toggle[aria-expanded="true"]+#navbar-menu {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 1);
     opacity: 1;
     visibility: visible;
 }
@@ -204,11 +214,12 @@ body {
 
 .main-content .title {
     font-size: 6.5rem;
-    font-weight: 900;
+    font-weight:bolder;
     color: #FF004D;
+    /* font-family: 'Poppins'; */
 }
 .main-content .title-content{
-    margin-top: 7%;
+    margin-top: 20%;
     display: flex;
     flex-direction: column;
 
@@ -217,14 +228,31 @@ body {
     margin-top: 30px;
     text-align: center;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 
+}
+
+.main-content section{
+    position:sticky;
+    /* position:-webkit-sticky; */
+    top: 0;
+    padding:30px;
+    min-height:100vh;
+}
+
+.main-content #footer{
+    background-color: blue;
+}
+
+.brand-text{
+    font-weight:bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media screen and (max-width: 550px) {
     .main-content .title-content {
-        margin-top: 30%;
-        margin-bottom: 50%;
+        margin-top: 90%;
+        /* margin-bottom: 50%; */
 
     }
     .main-content .title-content .title{
