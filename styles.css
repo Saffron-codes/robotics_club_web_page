@@ -326,6 +326,13 @@ body {
         font-weight: 900;
     }
 
+
+    .welcome-content .subtitle {
+        color: white;
+        font-size: 1rem;
+    }
+
+
     #footer-section .footer .footer__title {
         font-size: 4rem;
         font-weight:900;
