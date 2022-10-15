@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics Club - Projects</title>
-    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/ac/41/fe/ac41fe6cf482dcca2a1c1331559e961b.png">
+    <title>SJCRC - Events</title>
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <link href="../../styles.css" rel="stylesheet" />
-
 
 </head>
 
 <body>
+
     <div class="main">
         <div class="div-1">
             <header id="navbar">
@@ -32,11 +31,12 @@
                     <div id="navbar-menu" aria-labelledby="navbar-toggle">
                         <ul class="navbar-links">
                             <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="../events/events_page.html">Events</a>
+                            <li class="navbar-item"><a class="navbar-link" href="./events_page.html">Events</a>
 
                             </li>
                             <li class="navbar-item"><a class="navbar-link"
-                                    href="./projects_page.html">Projects</a>
+                                    href="../projects/projects_page.html">Projects</a>
+
                             <li class="navbar-item"><a class="navbar-link" href="../about/about.html">About</a>
 
                             </li>
@@ -45,15 +45,12 @@
                 </nav>
             </header>
         </div>
-
-
-
         <div class="div-2">
             <section id="footer-section">
                 <div class="footer">
                     <h1 class="footer__title title">Join Now</h1>
-                    <img src="../../assets/whatsapp-icon.svg" alt="Image" />
-                    <p>Developed by  
+                    <img src="./assets/whatsapp-icon.svg" alt="Image" />
+                    <p>Developed by
                         <!-- <img src="./assets/developer.png"/> -->
                         <br>
                         <span>
@@ -65,17 +62,47 @@
                     </p>
                 </div>
             </section>
+            <section id="events-section">
+                <div id="loader">
 
-            <section id="projects-section">
-                <div class="projects">
-                    <div class="project">
-                        <h1 class="title center">Projects</h1>
-                    </div>
+                </div>
+                <div id="events">
+
                 </div>
             </section>
         </div>
     </div>
 
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAK3IEUkA0z4q9rmplq_L5P_uoqf0R7xLo",
+            authDomain: "sjcrc-8c7b5.firebaseapp.com",
+            projectId: "sjcrc-8c7b5",
+            storageBucket: "sjcrc-8c7b5.appspot.com",
+            messagingSenderId: "64393255327",
+            appId: "1:64393255327:web:427dce02b315fa8031c5aa",
+            measurementId: "G-98HPWTY3M4"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = firebase.firestore();
+
+        // console.log(db);
+    </script>
+    <script src="./events.js"></script>
     <script src="../../script.js"></script>
 </body>
 
