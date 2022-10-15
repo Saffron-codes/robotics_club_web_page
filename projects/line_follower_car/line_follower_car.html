@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <style>
-        .main{
+        .hero {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 200px;
-        }
-        main{
-            position: relative;
-            z-index: 10;
-            background-color: aqua;
             width: 100vw;
             height: 100vh;
+            
         }
-        .footer{
-            position: relative;
-            z-index: 1;
-            height: 100vh;
+        #section-1{
+            background-color: blue;
+        }
+        #section-2{
+            background-color: aliceblue;
+        }
+
+        .hero-inner {
+            position: absolute;
+            overflow: hidden;
             width: 100%;
-            background-color: black;
+            height: 100%;
+            clip: rect(0, auto, auto, 0);
         }
     </style>
-    <div class="main">
-        <main>
-            <h1>Hello</h1>
-        </main>
-        <div class="footer">
-
+    <section class="hero">
+        <div class="hero-inner" id="section-1">
+            <h2 class="hero__title">Explore our world</h2>
         </div>
-    </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-inner" id="section-2">
+            <figure></figure>
+            <h2 class="hero__title">View all its beauty</h2>
+        </div>
+    </section>
 </body>
+
 </html>

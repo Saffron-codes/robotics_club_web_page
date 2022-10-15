@@ -205,57 +205,106 @@ body {
     }
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.main-content .title {
-    font-size: 6.5rem;
+
+.welcome-content .title {
+    font-size: 5rem;
     font-weight:bolder;
     color: #FF004D;
     /* font-family: 'Poppins'; */
 }
-.main-content .title-content{
-    margin-top: 20%;
-    display: flex;
-    flex-direction: column;
 
-}
-.main-content .title-content p{
-    margin-top: 30px;
+.welcome-content .subtitle{
+    margin-top: 20px;
     text-align: center;
     color: white;
-    font-size: 1.6rem;
-
+    font-size: 1.2srem;
 }
 
-.main-content section{
-    position:sticky;
-    /* position:-webkit-sticky; */
-    top: 0;
-    padding:30px;
-    min-height:100vh;
-}
-
-.main-content #footer{
-    background-color: blue;
-}
 
 .brand-text{
     font-weight:bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-@media screen and (max-width: 550px) {
-    .main-content .title-content {
-        margin-top: 90%;
-        /* margin-bottom: 50%; */
 
+
+
+.main{
+    position: relative;
+}
+
+.div-1{
+    position: fixed;
+    z-index: 1;
+}
+
+.div-2{
+    position: absolute;
+    z-index: 0;
+    top: 100px;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-section{
+    position: fixed;
+    /* background-color: blue; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#footer-section .footer{
+    position: fixed;
+    top: 60%;
+}
+
+#footer-section .footer .footer__title{
+    font-size: 3rem;
+    font-weight:bolder;
+    color: #FF004D;
+}
+
+#welcome-section{
+    position: sticky;
+    /* background-color: rgb(12, 12, 244); */
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    margin-bottom: 200%;
+    margin-top: 0px;
+    top: 0;
+}
+
+#welcome-section .welcome-content{
+    position: sticky;
+    top: 40%;
+    left: 20%;
+}
+
+.welcome-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    #welcome-section .welcome-content{
+        position: sticky;
+        top: 50%;
+        left: 20%;
     }
-    .main-content .title-content .title{
+    .welcome-content .title{
         font-size: 8vw;
         font-weight: 900;
     }
