@@ -39,6 +39,16 @@ body {
     margin-right: auto;
 }
 
+.title{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FF004D;
+}
+
+.center{
+    text-align: center;
+}
+
 #navbar {
     --navbar-height: 100px;
     position: fixed;
@@ -316,6 +326,22 @@ body {
     /* right: 50%; */
 }
 
+#about-section{
+    position: sticky;
+    /* background-color: rgb(12, 12, 244); */
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    margin-bottom: 200%;
+    margin-top: 0px;
+    top: 0;
+}
+
+#about-section .about-us-content{
+    padding: 50px;
+}
+
 .welcome-content .title {
     font-size: 5rem;
     font-weight: bolder;
@@ -331,6 +357,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center
+}
+
+.title{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FF004D;
 }
 
 @media screen and (max-width: 550px) {
