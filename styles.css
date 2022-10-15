@@ -207,12 +207,6 @@ body {
 
 
 
-.welcome-content .title {
-    font-size: 5rem;
-    font-weight:bolder;
-    color: #FF004D;
-    /* font-family: 'Poppins'; */
-}
 
 .welcome-content .subtitle{
     margin-top: 20px;
@@ -286,24 +280,39 @@ body {
 }
 
 #welcome-section .welcome-content{
-    position: sticky;
+    /* left: 20%; */
+    position: absolute;
     top: 40%;
-    left: 20%;
+    left: 0%;
+    right: 0;
+    /* left: 50%; */
+    /* right: 50%; */
 }
+
+.welcome-content .title {
+    font-size: 5rem;
+    font-weight:bolder;
+    color: #FF004D;
+    /* width: 100vw; */
+    /* text-align: center; */
+    /* font-family: 'Poppins'; */
+}
+
 
 .welcome-texts{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 @media screen and (max-width: 550px) {
-    #welcome-section .welcome-content{
-        position: sticky;
+    /* #welcome-section .welcome-content{
+        position: absolute;
         top: 50%;
-        left: 20%;
-    }
+        left: 0%;
+        right: 0;
+    } */
     .welcome-content .title{
         font-size: 8vw;
         font-weight: 900;
