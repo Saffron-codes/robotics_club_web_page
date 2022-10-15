@@ -20,9 +20,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     height: 100vh;
@@ -264,14 +265,33 @@ body {
     top: 50%;
 }
 
-#footer-section,#welcome-section img:hover {
+#footer-section,
+#welcome-section img:hover {
     cursor: pointer;
 }
 
 #footer-section .footer .footer__title {
     font-size: 5rem;
-    font-weight:900;
+    font-weight: 900;
     color: #FF004D;
+}
+
+.footer p {
+    color: grey;
+    margin-top: 40px;
+}
+
+.footer p img {
+    height: 25px;
+    width: 25px;
+}
+
+.footer span {
+    color: rgb(89, 89, 182);
+}
+
+.footer span a {
+    text-decoration: none;
 }
 
 #welcome-section {
@@ -335,7 +355,7 @@ body {
 
     #footer-section .footer .footer__title {
         font-size: 4rem;
-        font-weight:900;
+        font-weight: 900;
         color: #FF004D;
     }
 }
