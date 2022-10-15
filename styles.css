@@ -20,6 +20,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
     height: 100vh;
@@ -59,11 +62,11 @@ body {
     width: 100%;
 }
 
-.home-link{
+.home-link {
     color: white;
     text-decoration: none;
     display: flex;
-    font-weight:700;
+    font-weight: 700;
     align-items: center;
     font-size: large;
 }
@@ -73,7 +76,7 @@ body {
     color: var(--navbar-text-color);
     text-decoration: none;
     display: flex;
-    font-weight:700;
+    font-weight: 700;
     align-items: center;
     font-size: large;
 }
@@ -208,32 +211,32 @@ body {
 
 
 
-.welcome-content .subtitle{
+.welcome-content .subtitle {
     margin-top: 20px;
     text-align: center;
     color: white;
-    font-size: 1.2srem;
+    font-size: 2rem;
 }
 
 
-.brand-text{
-    font-weight:bolder;
+.brand-text {
+    font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 
 
-.main{
+.main {
     position: relative;
 }
 
-.div-1{
+.div-1 {
     position: fixed;
     z-index: 1;
 }
 
-.div-2{
+.div-2 {
     position: absolute;
     z-index: 0;
     top: 100px;
@@ -247,7 +250,7 @@ body {
     text-align: center;
 }
 
-#footer-section{
+#footer-section {
     position: fixed;
     /* background-color: blue; */
     top: 0;
@@ -256,18 +259,22 @@ body {
     right: 0;
 }
 
-#footer-section .footer{
+#footer-section .footer {
     position: fixed;
-    top: 60%;
+    top: 50%;
 }
 
-#footer-section .footer .footer__title{
-    font-size: 3rem;
-    font-weight:bolder;
+#footer-section,#welcome-section img:hover {
+    cursor: pointer;
+}
+
+#footer-section .footer .footer__title {
+    font-size: 5rem;
+    font-weight:900;
     color: #FF004D;
 }
 
-#welcome-section{
+#welcome-section {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
     background-color: black;
@@ -279,10 +286,10 @@ body {
     top: 0;
 }
 
-#welcome-section .welcome-content{
+#welcome-section .welcome-content {
     /* left: 20%; */
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 0%;
     right: 0;
     /* left: 50%; */
@@ -291,7 +298,7 @@ body {
 
 .welcome-content .title {
     font-size: 5rem;
-    font-weight:bolder;
+    font-weight: bolder;
     color: #FF004D;
     /* width: 100vw; */
     /* text-align: center; */
@@ -299,7 +306,7 @@ body {
 }
 
 
-.welcome-texts{
+.welcome-texts {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,14 +314,21 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+
     /* #welcome-section .welcome-content{
         position: absolute;
         top: 50%;
         left: 0%;
         right: 0;
     } */
-    .welcome-content .title{
+    .welcome-content .title {
         font-size: 8vw;
         font-weight: 900;
+    }
+
+    #footer-section .footer .footer__title {
+        font-size: 4rem;
+        font-weight:900;
+        color: #FF004D;
     }
 }

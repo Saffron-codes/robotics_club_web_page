@@ -12,3 +12,16 @@ navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
 navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
 navbarMenu.addEventListener("click", toggleNavbarVisibility);
+
+
+
+function scrollBottom(){
+  // window.scrollTo(0, document.body.scrollHeight);
+  window.scrollBy({ 
+    // bottom:100,
+    top: 1000, // could be negative value
+    left: 0, 
+    
+    behavior: 'smooth' 
+  });
+}
