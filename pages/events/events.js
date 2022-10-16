@@ -1,11 +1,11 @@
 window.onload = function () {
     // console.log("Done");
-    const loader = document.getElementById("loader")
+    const loader = document.querySelector(".loader")
     const eventsDiv = document.getElementById("events")
     const event = new Events();
     event.getAll().then((data) => {
         // console.log(data);
-        loader.style.visibility = "hidden";
+        loader.style.display = "none";
         if (data.length > 0) {
             data.forEach((event) => {
                 console.log(event.name);

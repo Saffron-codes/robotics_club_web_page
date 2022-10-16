@@ -39,13 +39,13 @@ body {
     margin-right: auto;
 }
 
-.title{
+.title {
     font-size: 4rem;
     font-weight: 900;
     color: #FF004D;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -53,7 +53,7 @@ body {
     --navbar-height: 100px;
     position: fixed;
     height: var(--navbar-height);
-    background-color: black;
+    background-color: #070707;
     /* background-color: #070707; */
     /* background-color: var(--navbar-bg-color); */
     left: 0;
@@ -95,7 +95,7 @@ body {
 
 
 
-.home-link:hover{
+.home-link:hover {
     /* color:grey; */
     opacity: 0.5;
 }
@@ -267,7 +267,7 @@ body {
 
 #footer-section {
     position: fixed;
-    /* background-color: blue; */
+    background-color: #070707;
     top: 0;
     bottom: 0;
     left: 0;
@@ -311,7 +311,7 @@ body {
 #welcome-section {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
-    background-color: black;
+    background-color: #070707;
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -330,10 +330,10 @@ body {
     /* right: 50%; */
 }
 
-#about-section{
+#about-section {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
-    background-color: black;
+    background-color: #070707;
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -345,7 +345,7 @@ body {
 #projects-section {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
-    background-color: black;
+    background-color: #070707;
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -357,7 +357,7 @@ body {
 #events-section {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
-    background-color: black;
+    background-color: #070707;
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -368,7 +368,7 @@ body {
     top: 0;
 }
 
-#about-section .about-us-content{
+#about-section .about-us-content {
     padding: 50px;
 }
 
@@ -390,46 +390,68 @@ body {
 }
 
 
-#loader{
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
     position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
     min-height: 10px;
     z-index: 9999;
-    background: url('./assets/loader.gif') 
-                50% 50% no-repeat rgb(0,0,0);
-  }
+}
 
-  .event{
+.loader__box{
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.event {
     background-color: rgba(222, 34, 90, 0.3);
     margin-top: 10px;
     margin: 40px;
     border-radius: 10px;
     padding: 25px;
-  }
+}
 
-  .event .event__title__card{
+.event .event__title__card {
     display: flex;
     align-items: center;
-  }
-  .event .event__title{
+}
+
+.event .event__title {
     color: white;
     margin-right: 10px;
-  }
+}
 
-  .event .event__details{
+.event .event__details {
     margin-top: 10px;
     /* #f10f53 */
-    background-color:rgba(241, 15, 83,0.8);
+    background-color: rgba(241, 15, 83, 0.8);
     padding: 10px;
     border-radius: 20px;
     /* opacity: 0.6; */
-  }
-  .event .event__date{
+}
+
+.event .event__date {
     color: grey;
-  }
+}
 
 @media screen and (max-width: 550px) {
 
@@ -457,26 +479,27 @@ body {
         color: #FF004D;
     }
 
-    #events-section{
+    #events-section {
         padding-left: 20px;
         padding-right: 20px;
     }
 
 
-    .event .event__title{
+    .event .event__title {
         font-size: small;
-      }
-    
-      .event .event__details{
+    }
+
+    .event .event__details {
         margin-top: 10px;
         /* #f10f53 */
-        background-color:rgba(241, 15, 83,0.8);
+        background-color: rgba(241, 15, 83, 0.8);
         padding: 10px;
         border-radius: 20px;
         /* opacity: 0.6; */
-      }
-      .event .event__date{
+    }
+
+    .event .event__date {
         color: grey;
-        font-size:x-small;
-      }
+        font-size: x-small;
+    }
 }
