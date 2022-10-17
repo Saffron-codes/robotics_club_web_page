@@ -1,60 +1,47 @@
-window.onload = function () {
-    // console.log("Done");
-    const loader = document.querySelector(".loader")
-    const eventsDiv = document.getElementById("events")
-    const event = new Events();
-    event.getAll().then((data) => {
-        // console.log(data);
-        loader.style.display = "none";
-        if (data.length > 0) {
-            data.forEach((event) => {
-                console.log(event.name);
+import Events from "./events_helper.js";
 
-                const eventDiv = document.createElement("div")
-                const eventTitle = document.createElement("h3")
-                const eventDate = document.createElement("h5");
-                const eventDetails = document.createElement("h4")
+const loader = document.querySelector(".loader")
+const eventsDiv = document.getElementById("events")
+const events = new Events();
+events.getAll().then((data) => {
+    // console.log(data);
+    loader.style.display = "none";
+    if (data.length > 0) {
+        data.forEach((event) => {
+            console.log(event.name);
 
-                const eventTitleRow = document.createElement("div");
-                eventDiv.className = "event";
-                eventTitle.className = "event__title";
-                eventDetails.className = "event__details";
-                eventDate.className = "event__date";
-                eventTitleRow.className = "event__title__card";
+            const eventDiv = document.createElement("div")
+            const eventTitle = document.createElement("h3")
+            const eventDate = document.createElement("h5");
+            const eventDetails = document.createElement("h4")
 
-                eventTitle.innerHTML = event.name;
-                eventDate.innerHTML = relativeDays(event.date.toDate());
-                eventDetails.innerHTML = event.details;
+            const eventTitleRow = document.createElement("div");
+            eventDiv.className = "event";
+            eventTitle.className = "event__title";
+            eventDetails.className = "event__details";
+            eventDate.className = "event__date";
+            eventTitleRow.className = "event__title__card";
 
-                eventTitleRow.appendChild(eventTitle)
-                eventTitleRow.appendChild(eventDate)
+            eventTitle.innerHTML = event.name;
+            eventDate.innerHTML = relativeDays(event.date.toDate());
+            eventDetails.innerHTML = event.details;
 
-                eventDiv.appendChild(eventTitleRow)
-                eventDiv.appendChild(eventDetails)
+            eventTitleRow.appendChild(eventTitle)
+            eventTitleRow.appendChild(eventDate)
 
-
-                eventsDiv.appendChild(eventDiv)
-            })
-        }else{
-            alert("Error retreaving events");
-        }
-    })
-}
+            eventDiv.appendChild(eventTitleRow)
+            eventDiv.appendChild(eventDetails)
 
 
-class Events {
-    eventsRef = db.collection("events");
-    async getAll() {
-        const events = [];
-        try {
-            const snapshot = await this.eventsRef.get();
-            snapshot.forEach(doc => events.push({ id: doc.id, ...doc.data() }))
-        } catch (error) {
-            console.log('Error : ', error);
-        }
-        return events;
+            eventsDiv.appendChild(eventDiv)
+        })
+    }else{
+        alert("Error retreaving events");
     }
-}
+})
+
+
+
 
 
 function relativeDays(timestamp) {

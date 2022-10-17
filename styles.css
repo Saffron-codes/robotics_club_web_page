@@ -334,7 +334,7 @@ body {
     position: sticky;
     /* background-color: rgb(12, 12, 244); */
     background-color: #070707;
-    height: 100vh;
+    /* height: 1000vh; */
     width: 100vw;
     margin: 0px;
     margin-bottom: 200%;
